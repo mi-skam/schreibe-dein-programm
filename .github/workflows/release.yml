@@ -27,10 +27,10 @@ jobs:
     
     - name: Create book
       run: |
-        - pdflatex i1
-        - bibtex i1
-        - pdflatex i1
-        - sed -i 's/\\"/"/g' i1.idx
-        - sed -i 's/\\eingebaut/eingebaut/g' i1.idx
-        - makeindex -c -s i1.mst -g i1
-        - pdflatex i1
+        pdflatex i1
+        bibtex i1
+        pdflatex i1
+        sed -i 's/\\"/"/g' i1.idx
+        sed -i 's/\\eingebaut/eingebaut/g' i1.idx
+        makeindex -c -s i1.mst -g i1
+        pdflatex i1
